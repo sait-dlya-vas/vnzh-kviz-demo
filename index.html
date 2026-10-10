@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ВНЖ в Турции для граждан России и Беларуси – узнайте стоимость за 45 секунд</title>
+<meta name="description" content="Оформление вида на жительство в Турции для граждан России и Беларуси. Ответьте на 3 вопроса и узнайте стоимость, срок и список документов.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ====== Цвета и размеры – меняются здесь ====== */
+  :root {
+    --sea: #0e3a46;        /* основной тёмный: заголовки, шапка карточки */
+    --sea-soft: #2b6f78;   /* второстепенный морской */
+    --paper: #f3f6f5;      /* фон страницы */
+    --white: #ffffff;
+    --citrus: #f3a33a;     /* кнопки и выбранные ответы */
+    --citrus-deep: #d97f12;
+    --ink: #17262b;        /* основной текст */
+    --muted: #56686d;      /* второстепенный текст */
+    --line: #d4dedc;
+    --mark: #ffe88a;       /* подсветка пропусков в демо */
+    --radius-lg: 22px;
+    --radius-sm: 12px;
+    --wrap: 1180px;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 400 17px/1.55 "Golos Text", system-ui, sans-serif; }
+  a { color: inherit; }
+  img, svg { display: block; max-width: 100%; }
+  :focus-visible { outline: 3px solid var(--citrus-deep); outline-offset: 3px; border-radius: 6px; }
+  .wrap { width: min(100% - 32px, var(--wrap)); margin-inline: auto; }
+  mark.gap { background: var(--mark); color: var(--ink); padding: 0 .3em; border-radius: 4px; }
+
+  /* ====== Плашка демо (удалить на рабочем сайте) ====== */
+  .demo-note { background: var(--mark); color: var(--ink); font-size: 14px; text-align: center; padding: 8px 16px; }
+
+  /* ====== Шапка ====== */
+  .top { background: var(--white); border-bottom: 1px solid var(--line); }
+  .top__row { display: flex; align-items: center; gap: 24px; min-height: 72px; }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; font-size: 18px; color: var(--sea); line-height: 1.1; }
+  .logo__mark { width: 36px; height: 36px; border-radius: 10px; background: var(--sea); position: relative; flex: none; }
+  .logo__mark::after { content: ""; position: absolute; inset: 9px; border-radius: 50%; background: var(--citrus); }
+  .logo small { display: block; font-weight: 500; font-size: 12px; color: var(--muted); }
+  .top { position: relative; z-index: 5; }
+  .logo { white-space: nowrap; }
+  .menu { margin-left: auto; position: relative; }
+  .menu summary { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1.5px solid var(--line); cursor: pointer; font-weight: 600; color: var(--sea); list-style: none; }
+  .menu summary:hover { border-color: var(--sea-soft); }
+  .menu summary::-webkit-details-marker { display: none; }
+  .menu summary::after { content: ""; width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translateY(-2px); }
+  .menu[open] summary::after { transform: rotate(-135deg) translateY(-1px); }
+  .menu ul { list-style: none; margin: 0; padding: 18px 22px; position: absolute; right: 0; top: calc(100% + 10px); width: 520px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; background: var(--white); border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 24px 48px -28px rgba(14, 58, 70, .45); font-size: 15px; }
+  .menu a { text-decoration: none; color: var(--ink); }
+  .menu a:hover { color: var(--sea-soft); text-decoration: underline; text-underline-offset: 4px; }
+  .contacts { display: flex; flex-direction: column; gap: 2px; font-size: 15px; font-weight: 600; white-space: nowrap; }
+  .contacts a { text-decoration: none; display: flex; align-items: center; gap: 8px; }
+  .contacts span { font-weight: 500; color: var(--muted); font-size: 13px; min-width: 64px; }
+
+  /* ====== Первый экран с квизом ====== */
+  .hero { padding: 48px 0 72px; }
+  .hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) 440px; gap: 56px; align-items: start; }
+  .hero h1 { margin: 0; color: var(--sea); font-weight: 700; font-size: clamp(30px, 2.4vw + 14px, 46px); line-height: 1.08; letter-spacing: -.02em; max-width: 24ch; text-wrap: balance; }
+  .hero__lead { margin: 14px 0 0; font-size: 20px; color: var(--muted); max-width: 36ch; }
+
+  /* Квиз */
+  .quiz { margin-top: 32px; background: var(--white); border-radius: var(--radius-lg); padding: 28px; border: 1px solid var(--line); }
+  .quiz__head { display: flex; align-items: center; gap: 16px; }
+  .quiz__count { font-weight: 600; color: var(--sea); white-space: nowrap; }
+  .quiz__bar { flex: 1; height: 6px; background: var(--paper); border-radius: 6px; overflow: hidden; }
+  .quiz__bar i { display: block; height: 100%; width: 0; background: var(--citrus); border-radius: 6px; transition: width .35s ease; }
+  .step { border: 0; margin: 22px 0 0; padding: 0; min-width: 0; }
+  .step[hidden] { display: none; }
+  .step legend { padding: 0; font-weight: 600; font-size: 23px; line-height: 1.25; color: var(--ink); }
+  .step__hint { margin: 6px 0 0; color: var(--muted); font-size: 15px; }
+  .options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+  .opt { position: relative; display: flex; align-items: center; gap: 12px; padding: 14px 16px; min-height: 60px; border: 1.5px solid var(--line); border-radius: var(--radius-sm); cursor: pointer; background: var(--white); transition: border-color .15s, background-color .15s; }
+  .opt:hover { border-color: var(--sea-soft); }
+  .opt input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .opt__box { flex: none; width: 22px; height: 22px; border: 2px solid var(--line); background: var(--white); display: grid; place-items: center; transition: background-color .15s, border-color .15s; }
+  .opt__box--radio { border-radius: 50%; }
+  .opt__box--check { border-radius: 6px; }
+  .opt__box::after { content: ""; width: 8px; height: 8px; border-radius: inherit; background: var(--ink); transform: scale(0); transition: transform .15s; }
+  .opt input:checked ~ .opt__box { border-color: var(--ink); background: var(--citrus); }
+  .opt input:checked ~ .opt__box::after { transform: scale(1); }
+  .opt:has(input:checked) { border-color: var(--citrus-deep); background: #fff8ec; }
+  .opt input:focus-visible ~ .opt__box { outline: 3px solid var(--citrus-deep); outline-offset: 2px; }
+  .quiz__nav[hidden] { display: none; }
+  .quiz__nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 22px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 999px; border: 0; font: 600 16px/1 "Golos Text", system-ui, sans-serif; cursor: pointer; text-decoration: none; transition: background-color .15s, opacity .15s; }
+  .btn--main { background: var(--citrus); color: var(--ink); }
+  .btn--main:hover { background: var(--citrus-deep); }
+  .btn--main:disabled { opacity: .45; cursor: not-allowed; }
+  .btn--ghost { background: transparent; color: var(--muted); padding: 0 8px; }
+  .btn--ghost:hover { color: var(--ink); }
+  .btn--sea { background: var(--sea); color: var(--white); }
+  .btn--sea:hover { background: var(--sea-soft); }
+  .btn--line { background: var(--white); color: var(--sea); border: 1.5px solid var(--sea); }
+  .btn--line:hover { background: var(--paper); }
+
+  /* Результат */
+  .result[hidden] { display: none; }
+  .result { margin-top: 22px; }
+  .result h2 { margin: 0; font-size: 23px; line-height: 1.25; }
+  .result__price { margin: 14px 0 0; font-weight: 700; color: var(--sea); font-size: clamp(40px, 4vw + 16px, 60px); line-height: 1; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+  .result__price small { display: block; margin-top: 8px; font-size: 16px; font-weight: 500; color: var(--muted); letter-spacing: 0; }
+  .facts { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 10px; }
+  .facts li { display: grid; grid-template-columns: 180px 1fr; gap: 12px; padding-top: 10px; border-top: 1px solid var(--line); }
+  .facts b { font-weight: 600; color: var(--muted); }
+  .result__ctas { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+  .result__again { margin-top: 12px; }
+
+  /* ====== Карточка ВНЖ (заполняется по ответам) ====== */
+  .permit-col { position: sticky; top: 24px; }
+  .permit { aspect-ratio: 1.586; background: var(--white); border-radius: 20px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; border: 1px solid var(--line); box-shadow: 0 30px 60px -36px rgba(14, 58, 70, .55); transform: rotate(-2deg); transition: transform .4s ease; }
+  .permit.is-done { transform: rotate(0deg); }
+  .permit__band { background: var(--sea); color: var(--white); padding: 12px 18px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+  .permit__band b { font-size: 15px; font-weight: 600; }
+  .permit__body { display: grid; grid-template-columns: 96px 1fr; gap: 16px; padding: 16px 18px; background:
+      repeating-linear-gradient(135deg, transparent 0 14px, rgba(43, 111, 120, .045) 14px 15px), var(--white); }
+  .permit__photo { width: 96px; height: 120px; border-radius: 10px; background: var(--paper); border: 1px dashed var(--line); display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 4px; padding: 8px; }
+  .person { width: 26px; height: 34px; position: relative; opacity: .25; transition: opacity .3s; }
+  .person::before { content: ""; position: absolute; left: 7px; top: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--sea); }
+  .person::after { content: ""; position: absolute; left: 2px; bottom: 0; width: 22px; height: 18px; border-radius: 11px 11px 4px 4px; background: var(--sea); }
+  .person.is-on { opacity: 1; }
+  .person--kid { transform: scale(.75); transform-origin: bottom center; }
+  .fields { display: grid; gap: 8px; align-content: start; min-width: 0; }
+  .field { min-width: 0; }
+  .field span { display: block; font-size: 11px; color: var(--muted); }
+  .field b { display: block; font-size: 14px; font-weight: 600; line-height: 1.25; min-height: 1.25em; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .field b.is-empty { color: transparent; background: linear-gradient(var(--line), var(--line)) left 70% / 70% 2px no-repeat; }
+  .field--price b { font-size: 22px; color: var(--sea); }
+  .field b.is-new { animation: ink .5s ease; }
+  @keyframes ink { from { background-color: var(--mark); } to { background-color: transparent; } }
+  .permit-note { margin: 16px 4px 0; font-size: 14px; color: var(--muted); }
+
+  /* ====== Как проходит оформление ====== */
+  .how { background: var(--white); padding: 72px 0; border-block: 1px solid var(--line); }
+  .how__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 56px; }
+  .how h2, .ask h2 { margin: 0; color: var(--sea); font-size: clamp(26px, 1.6vw + 14px, 36px); line-height: 1.15; letter-spacing: -.01em; }
+  .how__lead { margin: 14px 0 0; color: var(--muted); max-width: 40ch; }
+  .steps { list-style: none; margin: 0; padding: 0; counter-reset: s; display: grid; gap: 0; }
+  .steps li { counter-increment: s; display: grid; grid-template-columns: 56px 1fr; gap: 16px; padding: 20px 0; border-top: 1px solid var(--line); }
+  .steps li:last-child { border-bottom: 1px solid var(--line); }
+  .steps li::before { content: counter(s); width: 44px; height: 44px; border-radius: 50%; background: var(--paper); color: var(--sea); font-weight: 700; display: grid; place-items: center; }
+  .steps b { display: block; font-size: 19px; }
+  .steps p { margin: 4px 0 0; color: var(--muted); }
+
+  /* ====== Вопросы и контакты ====== */
+  .ask { padding: 72px 0; }
+  .ask__box { background: var(--sea); color: var(--white); border-radius: var(--radius-lg); padding: 44px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 32px; align-items: center; }
+  .ask h2 { color: var(--white); }
+  .ask p { margin: 12px 0 0; color: #c9dcdf; max-width: 52ch; }
+  .ask__ctas { display: flex; flex-direction: column; gap: 10px; min-width: 260px; }
+  .ask .btn--line { background: transparent; color: var(--white); border-color: rgba(255, 255, 255, .6); }
+  .ask .btn--line:hover { background: rgba(255, 255, 255, .08); }
+  .ask__phones { margin-top: 6px; font-size: 15px; color: #c9dcdf; text-align: center; }
+  .ask__phones a { text-decoration: none; color: var(--white); font-weight: 600; }
+
+  /* ====== Подвал ====== */
+  .foot { padding: 48px 0 40px; font-size: 15px; color: var(--muted); }
+  .foot__grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 32px; }
+  .foot h3 { margin: 0 0 10px; font-size: 15px; color: var(--ink); }
+  .foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .foot a { text-decoration: none; }
+  .foot a:hover { color: var(--ink); text-decoration: underline; }
+  .foot__small { margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 13px; }
+
+  /* ====== Планшет и телефон ====== */
+  @media (max-width: 1080px) {
+    .hero__grid { grid-template-columns: minmax(0, 1fr) 380px; gap: 36px; }
+  }
+  @media (max-width: 900px) {
+    .top__row { flex-wrap: wrap; gap: 10px 16px; padding: 10px 0; }
+    .menu { order: 3; width: 100%; margin: 0; position: static; }
+    .menu ul { position: static; width: auto; grid-template-columns: 1fr; gap: 12px; padding: 12px 0 8px; border: 0; border-radius: 0; box-shadow: none; background: transparent; font-size: 16px; }
+    .contacts { margin-left: auto; }
+    .hero { padding: 28px 0 56px; }
+    .hero__grid { grid-template-columns: 1fr; gap: 28px; }
+    .permit-col { position: static; max-width: 440px; }
+    .how__grid, .ask__box { grid-template-columns: 1fr; gap: 28px; }
+    .foot__grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    .logo small { display: none; }
+    .contacts span { display: none; }
+    .contacts { font-size: 14px; }
+    .hero__lead { font-size: 18px; }
+    .quiz { padding: 20px 16px; border-radius: 18px; margin-top: 24px; }
+    .step legend, .result h2 { font-size: 20px; }
+    .options { grid-template-columns: 1fr; gap: 8px; }
+    .opt { min-height: 54px; padding: 12px 14px; }
+    .facts li { grid-template-columns: 1fr; gap: 2px; }
+    .result__ctas .btn, .ask__ctas .btn { width: 100%; }
+    .permit__body { grid-template-columns: 76px 1fr; gap: 12px; padding: 12px 14px; }
+    .permit__photo { width: 76px; height: 96px; padding: 4px; }
+    .person { width: 22px; height: 30px; }
+    .person::after { width: 20px; left: 1px; }
+    .field--price b { font-size: 19px; }
+    .field span { font-size: 10px; }
+    .field b { font-size: 13px; }
+    .fields { gap: 5px; }
+    .how, .ask { padding: 52px 0; }
+    .ask__box { padding: 28px 20px; }
+    .ask__ctas { min-width: 0; }
+    .foot__grid { grid-template-columns: 1fr; gap: 24px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Плашка демо: удалить на рабочем сайте -->
+<div class="demo-note">Демо по вашему ТЗ. Жёлтым отмечено то, что нужно уточнить.</div>
+
+<header class="top">
+  <div class="wrap top__row">
+    <!-- Логотип: замените на картинку <img src="logo.png" alt="Название компании"> -->
+    <a class="logo" href="#top">
+      <span class="logo__mark" aria-hidden="true"></span>
+      <span>ВНЖ в Турции<small>Услуги для граждан РФ и РБ</small></span>
+    </a>
+
+    <details class="menu">
+      <summary>Услуги</summary>
+      <!-- Пункты меню: в href вставьте адреса страниц -->
+      <ul>
+        <li><a href="#quiz">Оформление</a></li>
+        <li><a href="#quiz">Продление</a></li>
+        <li><a href="#how">Сопровождение</a></li>
+        <li><a href="#how">Встреча и размещение</a></li>
+        <li><a href="#how">Через покупку недвижимости</a></li>
+        <li><a href="#how">Помощь с арендой жилья</a></li>
+        <li><a href="#how">Помощь с покупкой жилья</a></li>
+        <li><a href="#how">Счета и карты</a></li>
+        <li><a href="#how">Гражданство Турции</a></li>
+        <li><a href="#how">Медицина</a></li>
+      </ul>
+    </details>
+
+    <div class="contacts">
+      <a data-link="telegram" href="#"><span>Telegram</span><b data-text="telegramPhone"></b></a>
+      <a data-link="max" href="#"><span>MAX</span><b data-text="maxPhone"></b></a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <h1>Оформление вида на жительство в Турции для граждан России и Беларуси</h1>
+        <p class="hero__lead">Узнай точную стоимость ВНЖ под Ваши задачи за 45 секунд</p>
+
+        <form class="quiz" id="quiz" novalidate aria-label="Расчёт стоимости ВНЖ">
+          <div class="quiz__head">
+            <span class="quiz__count" id="quizCount">Вопрос 1 из 3</span>
+            <span class="quiz__bar" aria-hidden="true"><i id="quizBar"></i></span>
+          </div>
+
+          <div id="steps"><!-- вопросы появятся здесь из настроек в конце файла --></div>
+
+          <div class="quiz__nav" id="quizNav">
+            <button type="button" class="btn btn--ghost" id="btnBack">Назад</button>
+            <button type="button" class="btn btn--main" id="btnNext" disabled>Дальше</button>
+          </div>
+
+          <div class="result" id="result" hidden tabindex="-1">
+            <h2>Стоимость ВНЖ под ключ</h2>
+            <p class="result__price"><span id="resultPrice"></span><small id="resultFor"></small></p>
+            <ul class="facts">
+              <li><b>Срок оформления</b><span data-text="term"></span></li>
+              <li><b>Где оформляем</b><span data-text="cities"></span></li>
+              <li><b>Документы</b><span data-text="documents"></span></li>
+            </ul>
+            <div class="result__ctas">
+              <a class="btn btn--main" data-link="telegram" href="#">Пишите в Telegram</a>
+              <a class="btn btn--line" data-link="max" href="#">Пишите в MAX</a>
+            </div>
+            <button type="button" class="btn btn--ghost result__again" id="btnAgain">Пройти заново</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Карточка-расчёт: заполняется по мере ответов -->
+      <div class="permit-col">
+        <div class="permit" id="permit" aria-live="polite">
+          <div class="permit__band"><b>Ваш расчёт ВНЖ</b><span>Турция</span></div>
+          <div class="permit__body">
+            <div class="permit__photo" aria-hidden="true">
+              <i class="person"></i><i class="person"></i><i class="person person--kid"></i><i class="person person--kid"></i>
+            </div>
+            <div class="fields">
+              <div class="field"><span>Для кого</span><b id="fFamily" class="is-empty">–</b></div>
+              <div class="field"><span>Планы</span><b id="fPlans" class="is-empty">–</b></div>
+              <div class="field"><span>ВНЖ раньше</span><b id="fBefore" class="is-empty">–</b></div>
+              <div class="field field--price"><span>Под ключ</span><b id="fPrice" class="is-empty">–</b></div>
+            </div>
+          </div>
+        </div>
+        <p class="permit-note">В конце Вы получите точную стоимость, срок и полный список необходимых документов</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how" id="how">
+    <div class="wrap how__grid">
+      <div>
+        <h2>Все официально и безопасно</h2>
+        <p class="how__lead">Работаем по договору с <mark class="gap">[уточнить: с кем договор]</mark>. Оформление возможно в городах <span data-text="cities"></span>.</p>
+      </div>
+      <ol class="steps">
+        <li><div><b>Мы сами подготовим все документы</b><p>От вас – загранпаспорт и фотографии.</p></div></li>
+        <li><div><b>Назначим оформление</b><p>Срок оформления – <span data-text="term"></span>.</p></div></li>
+        <li><div><b>Когда все будет готово – один Ваш личный визит</b><p>Приезжаете один раз, остальное делаем мы.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="ask">
+    <div class="wrap">
+      <div class="ask__box">
+        <div>
+          <h2>Есть вопросы?</h2>
+          <p>Пишите в Telegram или MAX или звоните, приезжайте в Мерсин на личную встречу и консультацию.</p>
+        </div>
+        <div class="ask__ctas">
+          <a class="btn btn--main" data-link="telegram" href="#">Пишите в Telegram</a>
+          <a class="btn btn--line" data-link="max" href="#">Пишите в MAX</a>
+          <div class="ask__phones">
+            <a data-link="telegramCall" href="#" data-text="telegramPhone"></a> · <a data-link="maxCall" href="#" data-text="maxPhone"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div>
+        <h3>ВНЖ в Турции</h3>
+        <ul>
+          <li><a href="#quiz">Оформление ВНЖ</a></li>
+          <li><a href="#quiz">Продление ВНЖ</a></li>
+          <li>Оформление в городах: <span data-text="cities"></span></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Полезная информация</h3>
+        <ul>
+          <li><a href="#how">Помощь с жильем</a></li>
+          <li><a href="#how">Покупка недвижимости для гражданства</a></li>
+          <li><a href="#how">Организация медицинской помощи</a></li>
+          <li><a href="#how">Помощь в открытии счетов и карт</a></li>
+          <li><a href="#how">Получение водительского удостоверения</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Контакты</h3>
+        <ul>
+          <li><a data-link="telegram" href="#">Telegram: <span data-text="telegramPhone"></span></a></li>
+          <li><a data-link="max" href="#">MAX: <span data-text="maxPhone"></span></a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot__small">Расчёт в квизе предварительный. Точную стоимость подтверждаем при консультации.</p>
+  </div>
+</footer>
+
+<script>
+/* =====================================================================
+   НАСТРОЙКИ – всё, что меняется чаще всего, собрано здесь.
+   Меняйте текст в кавычках, остальное не трогайте.
+   ===================================================================== */
+var SETTINGS = {
+  telegramPhone: '+7 (995) 888-18-51',
+  telegramLink: 'https://t.me/+79958881851',   // ссылка на Telegram
+  maxPhone: '+90 (546) 838-90-33',
+  maxLink: '#',                                  // ссылка на MAX – уточнить у заказчика
+  term: '11 дней',
+  cities: 'Мерсин, Анталия, Алания, Стамбул',
+  documents: 'загранпаспорт и фотографии',
+  currency: '€'
+};
+
+/* Вопросы квиза. multi: true – можно выбрать несколько ответов.
+   У второго вопроса у каждого ответа своя цена (price) и число человек (adults, kids). */
+var QUESTIONS = [
+  {
+    id: 'plans', field: 'fPlans', multi: true,
+    title: 'Какие у Вас планы на переезд?',
+    hint: 'Можно выбрать несколько',
+    options: [
+      { text: 'Хочу второе гражданство', short: 'гражданство' },
+      { text: 'Намерен открыть бизнес', short: 'бизнес' },
+      { text: 'Планирую переезд', short: 'переезд' },
+      { text: 'Позже хочу получить гражданство', short: 'гражданство позже' },
+      { text: 'Нужны счета, карты, связь', short: 'счета и карты' },
+      { text: 'Нужно перемещаться по миру и без проблем получать визы', short: 'визы' }
+    ]
+  },
+  {
+    id: 'family', field: 'fFamily',
+    title: 'ВНЖ нужно для Вас или для всех членов семьи?',
+    options: [
+      { text: 'Только для меня', short: 'только я', price: 2000, adults: 1, kids: 0 },
+      { text: 'Для меня и супруги (а)', short: 'я и супруг(а)', price: 4000, adults: 2, kids: 0 },
+      { text: 'Для меня, супруги (а) и ребенка', short: 'я, супруг(а) и ребёнок', price: 6000, adults: 2, kids: 1 },
+      { text: 'Для меня, супруги (а) и двоих детей', short: 'я, супруг(а) и двое детей', price: 8000, adults: 2, kids: 2 }
+    ]
+  },
+  {
+    id: 'before', field: 'fBefore',
+    title: 'Ранее получали ВНЖ?',
+    options: [
+      { text: 'Да, в Турции', short: 'да, в Турции' },
+      { text: 'Да, в ЕС', short: 'да, в ЕС' },
+      { text: 'Да, в других странах', short: 'да, в других странах' },
+      { text: 'Нет', short: 'нет' }
+    ]
+  }
+];
+/* ===================== дальше – логика квиза ===================== */
+
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var answers = {}, current = 0, total = QUESTIONS.length;
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Меню «Услуги»: закрывается по клику мимо, по пункту меню и по Esc
+  var menu = document.querySelector('.menu');
+  document.addEventListener('click', function (e) { if (menu.open && (!menu.contains(e.target) || e.target.closest('.menu a'))) menu.open = false; });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menu.open) { menu.open = false; menu.querySelector('summary').focus(); } });
+
+  // Тексты и ссылки из настроек
+  document.querySelectorAll('[data-text]').forEach(function (el) { el.textContent = SETTINGS[el.getAttribute('data-text')]; });
+  var links = {
+    telegram: SETTINGS.telegramLink, max: SETTINGS.maxLink,
+    telegramCall: 'tel:' + SETTINGS.telegramPhone.replace(/[^\d+]/g, ''),
+    maxCall: 'tel:' + SETTINGS.maxPhone.replace(/[^\d+]/g, '')
+  };
+  document.querySelectorAll('[data-link]').forEach(function (a) {
+    var href = links[a.getAttribute('data-link')];
+    a.setAttribute('href', href);
+    if (/^https?:/.test(href)) { a.target = '_blank'; a.rel = 'noopener'; }
+  });
+
+  // Рисуем вопросы
+  var box = $('steps');
+  QUESTIONS.forEach(function (q, qi) {
+    var fs = document.createElement('fieldset');
+    fs.className = 'step'; fs.hidden = qi !== 0; fs.dataset.index = qi;
+    var html = '<legend>' + q.title + '</legend>' + (q.hint ? '<p class="step__hint">' + q.hint + '</p>' : '') + '<div class="options">';
+    q.options.forEach(function (o, oi) {
+      var type = q.multi ? 'checkbox' : 'radio';
+      html += '<label class="opt"><input type="' + type + '" name="' + q.id + '" value="' + oi + '">' +
+        '<span class="opt__box opt__box--' + (q.multi ? 'check' : 'radio') + '" aria-hidden="true"></span>' +
+        '<span>' + o.text + '</span></label>';
+    });
+    fs.innerHTML = html + '</div>';
+    box.appendChild(fs);
+  });
+
+  function chosen(qi) {
+    var q = QUESTIONS[qi];
+    return Array.prototype.slice.call(box.querySelectorAll('[name="' + q.id + '"]:checked')).map(function (i) { return q.options[+i.value]; });
+  }
+  function setField(id, text) {
+    var b = $(id);
+    var empty = !text;
+    if (!empty && b.textContent !== text) { b.classList.remove('is-new'); void b.offsetWidth; b.classList.add('is-new'); }
+    b.textContent = empty ? '–' : text;
+    b.classList.toggle('is-empty', empty);
+  }
+  function money(n) { return n.toLocaleString('ru-RU').replace(/ /g, ' ') + ' ' + SETTINGS.currency; }
+
+  // Карточка обновляется после каждого ответа
+  function updateCard() {
+    QUESTIONS.forEach(function (q, qi) {
+      setField(q.field, chosen(qi).map(function (o) { return o.short; }).join(', '));
+    });
+    var fam = chosen(1)[0];
+    setField('fPrice', fam ? money(fam.price) : '');
+    var people = document.querySelectorAll('.person');
+    people.forEach(function (p, i) {
+      var on = fam ? (i < 2 ? i < fam.adults : i - 2 < fam.kids) : false;
+      p.classList.toggle('is-on', on);
+    });
+  }
+
+  function show(i) {
+    current = i;
+    box.querySelectorAll('.step').forEach(function (s) { s.hidden = +s.dataset.index !== i; });
+    $('quizCount').textContent = 'Вопрос ' + (i + 1) + ' из ' + total;
+    $('quizBar').style.width = (i / total * 100) + '%';
+    $('btnBack').style.visibility = i === 0 ? 'hidden' : 'visible';
+    $('btnNext').textContent = i === total - 1 ? 'Узнать стоимость' : 'Дальше';
+    $('btnNext').disabled = chosen(i).length === 0;
+  }
+
+  function finish() {
+    var fam = chosen(1)[0];
+    $('resultPrice').textContent = money(fam.price);
+    $('resultFor').textContent = 'для: ' + fam.short;
+    box.hidden = true; $('quizNav').hidden = true; $('result').hidden = false;
+    $('quizCount').textContent = 'Готово';
+    $('quizBar').style.width = '100%';
+    $('permit').classList.add('is-done');
+    $('result').focus({ preventScroll: true });
+    $('quiz').scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
+  }
+
+  box.addEventListener('change', function (e) {
+    updateCard();
+    var q = QUESTIONS[current];
+    $('btnNext').disabled = chosen(current).length === 0;
+    // Один ответ – сразу к следующему вопросу (кроме последнего)
+    if (!q.multi && current < total - 1) setTimeout(function () { show(current + 1); }, reduced ? 0 : 280);
+  });
+  $('btnNext').addEventListener('click', function () { current < total - 1 ? show(current + 1) : finish(); });
+  $('btnBack').addEventListener('click', function () { if (current > 0) show(current - 1); });
+  $('btnAgain').addEventListener('click', function () {
+    $('quiz').reset(); box.hidden = false; $('quizNav').hidden = false; $('result').hidden = true;
+    $('permit').classList.remove('is-done'); updateCard(); show(0);
+  });
+
+  show(0);
+})();
+</script>
+</body>
+</html>
